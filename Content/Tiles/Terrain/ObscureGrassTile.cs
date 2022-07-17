@@ -1,8 +1,10 @@
-﻿using Terraria;
+﻿using Microsoft.Xna.Framework;
+using ObscuriaMod.Content.Items.Terrain;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ObscuriaMod.Content.Tiles.ObscureBadlands
+namespace ObscuriaMod.Content.Tiles.Terrain
 {
     public sealed class ObscureGrassTile : ModTile
     {
@@ -17,7 +19,10 @@ namespace ObscuriaMod.Content.Tiles.ObscureBadlands
             TileID.Sets.Conversion.Grass[Type] = true;
             TileID.Sets.NeedsGrassFraming[Type] = true;
 
+            AddMapEntry(new Color(62, 133, 152));
+
             HitSound = SoundID.Dig;
+            ItemDrop = ModContent.ItemType<ObscureDirtItem>();
         }
 
         public override void NumDust(int i, int j, bool fail, ref int num) {
@@ -29,7 +34,7 @@ namespace ObscuriaMod.Content.Tiles.ObscureBadlands
                 return;
             }
 
-            int style = Main.rand.Next(23);
+            var style = Main.rand.Next(23);
 
             if (PlaceObject(i, j - 1, ModContent.TileType<ObscureFoliageTile>(), false, style) && Main.rand.NextBool(10)) {
                 NetMessage.SendObjectPlacment(-1, i, j - 1, ModContent.TileType<ObscureFoliageTile>(), style, 0, -1, -1);

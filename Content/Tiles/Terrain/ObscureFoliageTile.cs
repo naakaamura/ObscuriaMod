@@ -2,8 +2,9 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using Microsoft.Xna.Framework;
 
-namespace ObscuriaMod.Content.Tiles.ObscureBadlands
+namespace ObscuriaMod.Content.Tiles.Terrain
 {
     public sealed class ObscureFoliageTile : ModTile
     {
@@ -30,12 +31,14 @@ namespace ObscuriaMod.Content.Tiles.ObscureBadlands
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.UsesCustomCanPlace = true;
 
-            for (int i = 0; i < 23; i++) {
+            for (var i = 0; i < 23; i++) {
                 TileObjectData.newSubTile.CopyFrom(TileObjectData.newTile);
                 TileObjectData.addSubTile(TileObjectData.newSubTile.Style);
             }
 
             TileObjectData.addTile(Type);
+
+            AddMapEntry(new Color(126, 77, 166));
 
             HitSound = SoundID.Grass;
         }
