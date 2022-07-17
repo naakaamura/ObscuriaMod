@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ObscuriaMod.Content.Tiles.ObscureBadlands;
+using System;
 using Terraria.ModLoader;
 
 namespace ObscuriaMod.Common.Systems
@@ -12,7 +13,10 @@ namespace ObscuriaMod.Common.Systems
         }
 
         public override void TileCountsAvailable(ReadOnlySpan<int> tileCounts) {
-            
+            ObscureBadlandsTileCount += tileCounts[ModContent.TileType<ObscureDirtTile>()];
+            ObscureBadlandsTileCount += tileCounts[ModContent.TileType<ObscureStoneTile>()];
+            ObscureBadlandsTileCount += tileCounts[ModContent.TileType<ObscureGrassTile>()];
+            ObscureBadlandsTileCount += tileCounts[ModContent.TileType<ObscureFoliageTile>()];
         }
     }
 }
