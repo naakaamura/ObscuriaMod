@@ -1,4 +1,4 @@
-﻿using ObscuriaMod.Content.Tiles.Terrain;
+﻿using ObscuriaMod.Content.Tiles.Obscure;
 using System;
 using Terraria.ModLoader;
 

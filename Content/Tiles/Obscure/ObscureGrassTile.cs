@@ -1,10 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
-using ObscuriaMod.Content.Items.Terrain;
+using ObscuriaMod.Content.Items.Placeables;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ObscuriaMod.Content.Tiles.Terrain
+namespace ObscuriaMod.Content.Tiles.Obscure
 {
     public sealed class ObscureGrassTile : ModTile
     {

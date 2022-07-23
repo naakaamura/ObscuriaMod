@@ -1,7 +1,7 @@
-﻿using ObscuriaMod.Content.Tiles.Terrain;
+﻿using ObscuriaMod.Content.Tiles.Obscure;
 using Terraria.ModLoader;
 
-namespace ObscuriaMod.Content.Items.Terrain
+namespace ObscuriaMod.Content.Items.Placeables
 {
     public sealed class ObscureStoneItem : ModItem
     {

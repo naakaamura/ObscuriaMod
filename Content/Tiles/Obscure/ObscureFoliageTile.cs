@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Microsoft.Xna.Framework;
 
-namespace ObscuriaMod.Content.Tiles.Terrain
+namespace ObscuriaMod.Content.Tiles.Obscure
 {
     public sealed class ObscureFoliageTile : ModTile
     {

@@ -1,24 +1,25 @@
 ﻿using Microsoft.Xna.Framework;
-using ObscuriaMod.Content.Items.Terrain;
+using ObscuriaMod.Content.Items.Placeables;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ObscuriaMod.Content.Tiles.Terrain
+namespace ObscuriaMod.Content.Tiles.Obscure
 {
-    public sealed class ObscureDirtTile : ModTile
+    public sealed class ObscureStoneTile : ModTile
     {
         public override void SetStaticDefaults() {
             Main.tileSolid[Type] = true;
+            Main.tileStone[Type] = true;
             Main.tileLighted[Type] = true;
             Main.tileBlendAll[Type] = true;
             Main.tileMergeDirt[Type] = true;
             Main.tileBlockLight[Type] = true;
 
-            AddMapEntry(new Color(126, 77, 166));
+            AddMapEntry(new Color(68, 52, 122));
 
-            HitSound = SoundID.Dig;
-            ItemDrop = ModContent.ItemType<ObscureDirtItem>();
+            HitSound = SoundID.Tink;
+            ItemDrop = ModContent.ItemType<ObscureStoneItem>();
         }
 
         public override void NumDust(int i, int j, bool fail, ref int num) {

@@ -1,11 +1,16 @@
 ﻿using ObscuriaMod.Common.Systems;
 using Terraria;
+using Terraria.Graphics.Capture;
 using Terraria.ModLoader;
 
-namespace ObscuriaMod.Content.Biomes.ObscureBadlands
+namespace ObscuriaMod.Content.Biomes.Obscure
 {
-    public sealed class ObscureBadlandsSurfaceBiome : ModBiome
+    public sealed class ObscureSurfaceBiome : ModBiome
     {
+        public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle => ModContent.Find<ModSurfaceBackgroundStyle>("ObscuriaMod/ObscureSurfaceBackgroundStyle");
+
+        public override CaptureBiome.TileColorStyle TileColorStyle => CaptureBiome.TileColorStyle.Corrupt;
+
         public override int Music => MusicLoader.GetMusicSlot("ObscuriaMod/Assets/Sounds/Music/MainTheme");
 
         public override void SetStaticDefaults() {
